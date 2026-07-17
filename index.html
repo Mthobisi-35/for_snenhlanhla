@@ -550,12 +550,12 @@
 
     /* ===================== confirm date ===================== */
     function confirmDate() {
-        const dateInput = document.getElementById("date");
-        const date = dateInput.value;
-        if (date === "") {
-            alert("Please choose a date ❤️");
-            return;
-        }
+    const dateInput = document.getElementById("date");
+    const date = dateInput.value;
+    if (date === "" || date < "2026-09-01" || date > "2026-09-30") {
+        alert("Please choose a date in September 💕");
+        return;
+    }
 
         const confirmBtn = document.getElementById("confirmBtn");
 
